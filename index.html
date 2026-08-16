@@ -43,7 +43,6 @@
 
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="registro.html">Agendar una cita</a>
-                    <a class="btn btn-outline" href="#como-funciona">Conocer cómo funciona</a>
                 </div>
 
                 <div class="hero-note" aria-label="Características principales">
@@ -175,7 +174,7 @@
         <div class="footer-grid">
             <div>
                 <img class="footer-logo" src="assets/img/logo-fondo-oscuro.png" alt="LegalAgenCit">
-                <p>Plataforma de gestión y agendamiento de servicios jurídicos. Diseñada para facilitar la relación entre clientes y abogados.</p>
+                <p class="footer-brand-description"><strong>Agendador de Citas Legales</strong><br>Plataforma de gestión y agendamiento de servicios jurídicos, diseñada para facilitar la relación entre clientes y abogados.</p>
             </div>
             <div>
                 <h4>Plataforma</h4>
@@ -211,6 +210,45 @@
 <script>
 const mobileToggle = document.querySelector(".mobile-toggle");
 const mainNavigation = document.getElementById("mainNavigation");
+const navigationLinks = document.querySelectorAll(".nav-links a");
+const pageSections = document.querySelectorAll("main section[id]");
+
+function setActiveNavigation(sectionId) {
+    navigationLinks.forEach(link => {
+        const isActive = link.getAttribute("href") === `#${sectionId}`;
+        link.classList.toggle("active", isActive);
+        if (isActive) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+}
+
+navigationLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        const targetId = this.getAttribute("href").substring(1);
+        setActiveNavigation(targetId);
+    });
+});
+
+if (pageSections.length) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        const visibleSections = entries
+            .filter(entry => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleSections.length) {
+            setActiveNavigation(visibleSections[0].target.id);
+        }
+    }, {
+        root: null,
+        rootMargin: "-25% 0px -55% 0px",
+        threshold: [0.1, 0.25, 0.5]
+    });
+
+    pageSections.forEach(section => sectionObserver.observe(section));
+}
 
 if (mobileToggle && mainNavigation) {
     mobileToggle.addEventListener("click", function () {
