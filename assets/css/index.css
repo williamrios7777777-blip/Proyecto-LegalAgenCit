@@ -26,6 +26,11 @@ button { font: inherit; cursor: pointer; }
 .container { width: min(100% - 56px, 1280px); margin: 0 auto; }
 
 /* ================================================================
+   DESPLAZAMIENTO DE SECCIONES CON HEADER FIJO
+================================================================ */
+section[id] { scroll-margin-top: 82px; }
+
+/* ================================================================
    BOTONES
 ================================================================ */
 .btn { min-height: 43px; padding: 0 17px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 8px; font-size: 13px; font-weight: 800; white-space: nowrap; transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease, box-shadow .18s ease; }
