@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Panel del cliente de LegalAgenCit."
+    >
+
+    <title>Panel del cliente | LegalAgenCit</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/dashboard-cliente.css"
+    >
+</head>
+
+
+<body class="dashboard-page">
+
+
+<!-- =========================================================
+     ENCABEZADO
+========================================================= -->
+
+<header class="dashboard-header">
+
+    <div class="container dashboard-navbar">
+
+
+        <!-- MARCA -->
+
+        <a
+            class="brand"
+            href="dashboard-cliente.html"
+            aria-label="LegalAgenCit - Panel"
+        >
+
+            <span class="brand-name">
+                LegalAgenCit
+            </span>
+
+        </a>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav
+            class="dashboard-nav"
+            aria-label="Navegación del cliente"
+        >
+
+            <a
+                class="active"
+                href="dashboard-cliente.html"
+            >
+                Inicio
+            </a>
+
+            <a href="mis-citas.html">
+                Mis citas
+            </a>
+
+            <a href="perfil.html">
+                Mi perfil
+            </a>
+
+        </nav>
+
+
+        <!-- USUARIO -->
+
+        <div class="dashboard-user">
+
+            <button
+                class="user-menu-button"
+                type="button"
+                id="userMenuButton"
+                aria-expanded="false"
+                aria-controls="userMenu"
+            >
+
+                <span class="user-avatar">
+                    WR
+                </span>
+
+                <span class="user-name">
+                    William Rios
+                </span>
+
+                <span class="user-chevron">
+                    ⌄
+                </span>
+
+            </button>
+
+
+            <div
+                class="user-menu"
+                id="userMenu"
+            >
+
+                <a href="perfil.html">
+                    Mi perfil
+                </a>
+
+                <a href="mis-citas.html">
+                    Mis citas
+                </a>
+
+                <a href="login.html">
+                    Cerrar sesión
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     CONTENIDO PRINCIPAL
+========================================================= -->
+
+<main class="dashboard-main">
+
+    <div class="container">
+
+
+        <!-- =====================================================
+             BIENVENIDA
+        ====================================================== -->
+
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <span class="dashboard-kicker">
+                    Panel del cliente
+                </span>
+
+                <h1>
+                    Hola, William.
+                </h1>
+
+                <p>
+                    Gestiona tus citas y encuentra la orientación
+                    jurídica que necesitas.
+                </p>
+
+            </div>
+
+
+            <a
+                class="btn btn-primary"
+                href="agendar-cita.html"
+            >
+
+                <svg
+                    class="button-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path d="M12 5v14"></path>
+                    <path d="M5 12h14"></path>
+
+                </svg>
+
+                Agendar una cita
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ESTADÍSTICAS
+        ====================================================== -->
+
+        <section
+            class="dashboard-stats"
+            aria-label="Resumen de actividad"
+        >
+
+
+            <!-- PRÓXIMA CITA -->
+
+            <article class="dashboard-stat">
+
+                <span class="stat-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                        ></circle>
+
+                        <path d="M12 7v5l3 2"></path>
+
+                    </svg>
+
+                </span>
+
+
+                <div>
+
+                    <span class="stat-label">
+                        Próxima cita
+                    </span>
+
+                    <strong>
+                        18 Ago 2026
+                    </strong>
+
+                    <small>
+                        10:00 a. m.
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CITAS REALIZADAS -->
+
+            <article class="dashboard-stat">
+
+                <span class="stat-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <path d="M5 12.5l4 4L19 6.5"></path>
+
+                    </svg>
+
+                </span>
+
+
+                <div>
+
+                    <span class="stat-label">
+                        Citas realizadas
+                    </span>
+
+                    <strong>
+                        4
+                    </strong>
+
+                    <small>
+                        Historial disponible
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CITAS PENDIENTES -->
+
+            <article class="dashboard-stat">
+
+                <span class="stat-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                        ></circle>
+
+                    </svg>
+
+                </span>
+
+
+                <div>
+
+                    <span class="stat-label">
+                        Citas pendientes
+                    </span>
+
+                    <strong>
+                        1
+                    </strong>
+
+                    <small>
+                        Requiere seguimiento
+                    </small>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTENIDO PRINCIPAL
+        ====================================================== -->
+
+        <div class="dashboard-content-grid">
+
+
+            <!-- =================================================
+                 PRÓXIMA CITA
+            ================================================== -->
+
+            <section class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            Agenda
+                        </span>
+
+                        <h2>
+                            Próxima cita
+                        </h2>
+
+                    </div>
+
+
+                    <a href="mis-citas.html">
+                        Ver todas
+                    </a>
+
+                </div>
+
+
+
+                <article class="appointment-featured">
+
+
+                    <!-- FECHA -->
+
+                    <div class="appointment-date">
+
+                        <span>
+                            AGO
+                        </span>
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <small>
+                            2026
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- INFORMACIÓN -->
+
+                    <div class="appointment-info">
+
+                        <span class="appointment-status status-confirmed">
+                            Confirmada
+                        </span>
+
+                        <h3>
+                            Consulta de derecho civil
+                        </h3>
+
+                        <p>
+                            Abogado asignado:
+                            <strong>
+                                Dr. Andrés Morales
+                            </strong>
+                        </p>
+
+                        <p>
+                            Martes, 18 de agosto · 10:00 a. m.
+                        </p>
+
+                        <p>
+                            Modalidad: Consulta programada
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ACCIÓN -->
+
+                    <div class="appointment-actions">
+
+                        <a
+                            class="btn btn-outline"
+                            href="detalle-cita.html"
+                        >
+                            Ver detalles
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACCESO RÁPIDO
+            ================================================== -->
+
+            <section class="dashboard-panel quick-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            Acciones
+                        </span>
+
+                        <h2>
+                            Acceso rápido
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="quick-actions">
+
+
+                    <!-- AGENDAR -->
+
+                    <a
+                        href="agendar-cita.html"
+                        class="quick-action"
+                    >
+
+                        <span class="quick-action-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path d="M12 5v14"></path>
+                                <path d="M5 12h14"></path>
+
+                            </svg>
+
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Agendar una cita
+                            </strong>
+
+                            <small>
+                                Solicita una nueva consulta.
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- MIS CITAS -->
+
+                    <a
+                        href="mis-citas.html"
+                        class="quick-action"
+                    >
+
+                        <span class="quick-action-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="8"
+                                ></circle>
+
+                                <path d="M12 7v5l3 2"></path>
+
+                            </svg>
+
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Consultar mis citas
+                            </strong>
+
+                            <small>
+                                Revisa próximas y anteriores.
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- PERFIL -->
+
+                    <a
+                        href="perfil.html"
+                        class="quick-action"
+                    >
+
+                        <span class="quick-action-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <circle
+                                    cx="12"
+                                    cy="8"
+                                    r="3"
+                                ></circle>
+
+                                <path d="M5 19c.8-3 3.2-5 7-5s6.2 2 7 5"></path>
+
+                            </svg>
+
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Actualizar mi perfil
+                            </strong>
+
+                            <small>
+                                Mantén tus datos actualizados.
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             ACTIVIDAD RECIENTE
+        ====================================================== -->
+
+        <section class="dashboard-panel recent-panel">
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-kicker">
+                        Actividad
+                    </span>
+
+                    <h2>
+                        Actividad reciente
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="activity-list">
+
+
+                <!-- ACTIVIDAD 1 -->
+
+                <div class="activity-item">
+
+                    <span class="activity-dot confirmed"></span>
+
+                    <div>
+
+                        <strong>
+                            Cita confirmada
+                        </strong>
+
+                        <p>
+                            Tu consulta de derecho civil fue confirmada.
+                        </p>
+
+                    </div>
+
+                    <time>
+                        Hoy
+                    </time>
+
+                </div>
+
+
+
+                <!-- ACTIVIDAD 2 -->
+
+                <div class="activity-item">
+
+                    <span class="activity-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            Cita solicitada
+                        </strong>
+
+                        <p>
+                            Se registró una nueva solicitud de consulta.
+                        </p>
+
+                    </div>
+
+                    <time>
+                        12 Ago
+                    </time>
+
+                </div>
+
+
+
+                <!-- ACTIVIDAD 3 -->
+
+                <div class="activity-item">
+
+                    <span class="activity-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            Perfil actualizado
+                        </strong>
+
+                        <p>
+                            La información de tu perfil fue actualizada.
+                        </p>
+
+                    </div>
+
+                    <time>
+                        08 Ago
+                    </time>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     PIE DE PÁGINA
+========================================================= -->
+
+<footer class="dashboard-footer">
+
+    <div class="container">
+
+        <span>
+            © 2026 LegalAgenCit
+        </span>
+
+
+        <div>
+
+            <a href="#">
+                Privacidad
+            </a>
+
+            <a href="#">
+                Términos de uso
+            </a>
+
+            <a href="index.html">
+                Sitio público
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================================
+           MENÚ DEL USUARIO
+        ====================================================== */
+
+        const userMenuButton =
+            document.getElementById(
+                "userMenuButton"
+            );
+
+
+        const userMenu =
+            document.getElementById(
+                "userMenu"
+            );
+
+
+        if (
+            userMenuButton &&
+            userMenu
+        ) {
+
+
+            userMenuButton.addEventListener(
+                "click",
+                function () {
+
+
+                    const expanded =
+                        userMenuButton.getAttribute(
+                            "aria-expanded"
+                        ) === "true";
+
+
+                    userMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(!expanded)
+                    );
+
+
+                    userMenu.classList.toggle(
+                        "open",
+                        !expanded
+                    );
+
+                }
+            );
+
+
+            document.addEventListener(
+                "click",
+                function (event) {
+
+
+                    if (
+                        !userMenuButton.contains(
+                            event.target
+                        ) &&
+                        !userMenu.contains(
+                            event.target
+                        )
+                    ) {
+
+
+                        userMenuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        userMenu.classList.remove(
+                            "open"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

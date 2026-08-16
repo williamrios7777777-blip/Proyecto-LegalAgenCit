@@ -1,0 +1,849 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f7fa;
+
+    color: #26384a;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    height: 68px;
+
+    background: #123a63;
+
+    color: white;
+}
+
+
+.nav {
+    width: min(1180px, calc(100% - 50px));
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =====================================================
+   MARCA
+===================================================== */
+
+.brand {
+    display: inline-flex;
+
+    align-items: center;
+
+    background: white;
+
+    color: #123a63;
+
+    padding: 9px 17px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   NAVEGACIÓN
+===================================================== */
+
+.nav nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.nav nav a {
+    color: #dce8f1;
+
+    text-decoration: none;
+
+    padding: 9px 13px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.nav nav a:hover {
+    background: rgba(255,255,255,.08);
+
+    color: white;
+}
+
+
+.nav nav a.active {
+    background: rgba(255,255,255,.12);
+
+    color: white;
+}
+
+
+/* =====================================================
+   USUARIO
+===================================================== */
+
+.user {
+    position: relative;
+}
+
+
+.user button {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.avatar {
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: #e8eff5;
+
+    color: #123a63;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: 900;
+}
+
+
+.user-name {
+    font-weight: 700;
+}
+
+
+#userMenu {
+    position: absolute;
+
+    right: 0;
+
+    top: 44px;
+
+    width: 170px;
+
+    background: white;
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.16);
+
+    overflow: hidden;
+
+    display: none;
+
+    z-index: 100;
+}
+
+
+#userMenu.open {
+    display: block;
+}
+
+
+#userMenu a {
+    display: block;
+
+    padding: 12px 15px;
+
+    color: #344c60;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+
+#userMenu a:hover {
+    background: #f1f5f8;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.container {
+    width: min(1180px, calc(100% - 50px));
+
+    margin: 0 auto;
+
+    padding: 30px 0 45px;
+}
+
+
+/* =====================================================
+   MIGAS
+===================================================== */
+
+.crumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    color: #8795a1;
+
+    font-size: 11px;
+}
+
+
+.crumb a {
+    color: #123a63;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.heading {
+    margin-bottom: 22px;
+}
+
+
+.kicker {
+    display: block;
+
+    color: #748391;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.1px;
+
+    margin-bottom: 6px;
+}
+
+
+.heading h1 {
+    color: #123a63;
+
+    font-size: 28px;
+
+    margin-bottom: 6px;
+}
+
+
+.heading p {
+    color: #71808d;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 17px;
+
+    margin-bottom: 20px;
+
+    background: #edf4f9;
+
+    border-radius: 8px;
+}
+
+
+.intro-icon {
+    width: 28px;
+
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    border-radius: 50%;
+
+    background: #123a63;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.intro strong {
+    display: block;
+
+    color: #294257;
+
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+
+.intro p {
+    color: #657887;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CATÁLOGO
+===================================================== */
+
+.professionals-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   TARJETA
+===================================================== */
+
+.professional-card {
+    background: white;
+
+    border: 1px solid #e0e7ed;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    transition: .15s;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.professional-card:hover {
+    border-color: #b9cbd8;
+
+    box-shadow:
+        0 6px 18px rgba(25,55,80,.07);
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   PARTE SUPERIOR
+===================================================== */
+
+.professional-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    border-bottom: 1px solid #edf1f4;
+}
+
+
+.professional-avatar {
+    width: 47px;
+
+    height: 47px;
+
+    flex: 0 0 47px;
+
+    border-radius: 50%;
+
+    background: #edf4f9;
+
+    color: #123a63;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 900;
+}
+
+
+.professional-top h2 {
+    color: #294257;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.specialty {
+    color: #557087;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   CUERPO
+===================================================== */
+
+.professional-body {
+    padding: 16px 18px;
+
+    flex: 1;
+}
+
+
+.data {
+    margin-bottom: 14px;
+}
+
+
+.data:last-child {
+    margin-bottom: 0;
+}
+
+
+.label {
+    display: block;
+
+    color: #8a97a2;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: .7px;
+
+    margin-bottom: 5px;
+}
+
+
+.data strong {
+    color: #405568;
+
+    font-size: 10px;
+}
+
+
+.data p {
+    color: #73828e;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   SERVICIOS
+===================================================== */
+
+.services {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+}
+
+
+.services span {
+    display: inline-block;
+
+    padding: 5px 7px;
+
+    border-radius: 4px;
+
+    background: #edf4f9;
+
+    color: #365872;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* =====================================================
+   PIE DE TARJETA
+===================================================== */
+
+.professional-footer {
+    min-height: 47px;
+
+    padding: 10px 18px;
+
+    border-top: 1px solid #edf1f4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+}
+
+
+.schedule-link {
+    color: #123a63;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.schedule-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   ACCIÓN
+===================================================== */
+
+.action-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 22px;
+
+    margin-bottom: 20px;
+
+    background: white;
+
+    border: 1px solid #e0e7ed;
+
+    border-radius: 9px;
+}
+
+
+.action-card h2 {
+    color: #123a63;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+
+.action-card p {
+    color: #71808d;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.btn {
+    min-height: 38px;
+
+    padding: 0 18px;
+
+    border-radius: 5px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.btn.primary {
+    background: #123a63;
+
+    color: white;
+}
+
+
+.btn.primary:hover {
+    background: #0d2d4c;
+}
+
+
+/* =====================================================
+   VOLVER
+===================================================== */
+
+.back {
+    margin-top: 4px;
+}
+
+
+.back a {
+    color: #123a63;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    border-top: 1px solid #e0e7ed;
+
+    background: white;
+
+    min-height: 62px;
+
+    padding: 15px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #8795a1;
+
+    font-size: 9px;
+}
+
+
+footer div {
+    display: flex;
+
+    gap: 18px;
+}
+
+
+footer a {
+    color: #71808d;
+
+    text-decoration: none;
+}
+
+
+footer a:hover {
+    color: #123a63;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .professionals-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .nav nav {
+        display: none;
+    }
+
+
+    .professionals-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .action-card {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nav {
+        width: calc(100% - 28px);
+    }
+
+
+    .user-name {
+        display: none;
+    }
+
+
+    .container {
+        width: calc(100% - 28px);
+
+        padding-top: 23px;
+    }
+
+
+    .heading h1 {
+        font-size: 24px;
+    }
+
+
+    .intro {
+        align-items: flex-start;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+
+    footer div {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .professional-top {
+        padding: 16px;
+    }
+
+
+    .professional-body {
+        padding: 14px 16px;
+    }
+
+
+    .professional-footer {
+        padding: 10px 16px;
+    }
+
+}

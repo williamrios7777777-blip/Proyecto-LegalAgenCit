@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Agenda una cita jurídica en LegalAgenCit."
+    >
+
+    <title>
+        Agendar cita | LegalAgenCit
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/agendar-cita.css"
+    >
+</head>
+
+<body class="dashboard-page">
+
+<!-- =========================================================
+     ENCABEZADO
+========================================================= -->
+
+<header class="dashboard-header">
+
+    <div class="container dashboard-navbar">
+
+        <!-- MARCA -->
+
+        <a
+            class="brand"
+            href="dashboard-cliente.html"
+            aria-label="LegalAgenCit - Panel del cliente"
+        >
+            <span class="brand-name">
+                LegalAgenCit
+            </span>
+        </a>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav
+            class="dashboard-nav"
+            aria-label="Navegación del cliente"
+        >
+
+            <a href="dashboard-cliente.html">
+                Inicio
+            </a>
+
+            <a
+                class="active"
+                href="agendar-cita.html"
+            >
+                Agendar cita
+            </a>
+
+            <a href="mis-citas.html">
+                Mis citas
+            </a>
+
+            <a href="perfil.html">
+                Mi perfil
+            </a>
+
+        </nav>
+
+
+        <!-- USUARIO -->
+
+        <div class="dashboard-user">
+
+            <button
+                class="user-menu-button"
+                id="userButton"
+                type="button"
+                aria-expanded="false"
+                aria-controls="userMenu"
+            >
+
+                <span class="user-avatar">
+                    WR
+                </span>
+
+                <span class="user-name">
+                    William Rios
+                </span>
+
+                <span class="user-chevron">
+                    ⌄
+                </span>
+
+            </button>
+
+
+            <div
+                class="user-menu"
+                id="userMenu"
+            >
+
+                <a href="perfil.html">
+                    Mi perfil
+                </a>
+
+                <a href="mis-citas.html">
+                    Mis citas
+                </a>
+
+                <a href="login.html">
+                    Cerrar sesión
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     CONTENIDO PRINCIPAL
+========================================================= -->
+
+<main class="booking-main">
+
+    <div class="container">
+
+
+        <!-- MIGAS DE NAVEGACIÓN -->
+
+        <nav
+            class="breadcrumb"
+            aria-label="Ruta de navegación"
+        >
+
+            <a href="dashboard-cliente.html">
+                Inicio
+            </a>
+
+            <span>
+                /
+            </span>
+
+            <span>
+                Agendar cita
+            </span>
+
+        </nav>
+
+
+        <!-- ENCABEZADO -->
+
+        <section class="booking-heading">
+
+            <div>
+
+                <span class="dashboard-kicker">
+                    NUEVA CITA
+                </span>
+
+                <h1>
+                    Agenda tu consulta jurídica
+                </h1>
+
+                <p>
+                    Selecciona el servicio, profesional, fecha
+                    y horario que mejor se adapte a tus necesidades.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INDICADOR DE PASOS
+        ====================================================== -->
+
+        <div
+            class="booking-steps"
+            aria-label="Pasos para agendar una cita"
+        >
+
+            <div
+                class="booking-step-indicator active"
+                data-step-indicator="1"
+            >
+
+                <span>
+                    1
+                </span>
+
+                <strong>
+                    Servicio
+                </strong>
+
+            </div>
+
+
+            <div
+                class="booking-step-indicator"
+                data-step-indicator="2"
+            >
+
+                <span>
+                    2
+                </span>
+
+                <strong>
+                    Profesional
+                </strong>
+
+            </div>
+
+
+            <div
+                class="booking-step-indicator"
+                data-step-indicator="3"
+            >
+
+                <span>
+                    3
+                </span>
+
+                <strong>
+                    Fecha y hora
+                </strong>
+
+            </div>
+
+
+            <div
+                class="booking-step-indicator"
+                data-step-indicator="4"
+            >
+
+                <span>
+                    4
+                </span>
+
+                <strong>
+                    Confirmación
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             CONTENIDO DE LA RESERVA
+        ====================================================== -->
+
+        <div class="booking-layout">
+
+
+            <!-- =================================================
+                 FORMULARIO
+            ================================================== -->
+
+            <section class="booking-card">
+
+
+                <!-- =================================================
+                     PASO 1
+                ================================================== -->
+
+                <div
+                    class="booking-content-step active"
+                    id="step1"
+                >
+
+                    <div class="section-heading">
+
+                        <span class="step-kicker">
+                            PASO 1
+                        </span>
+
+                        <h2>
+                            ¿Qué servicio necesitas?
+                        </h2>
+
+                        <p>
+                            Selecciona el área jurídica relacionada
+                            con tu consulta.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-grid">
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho penal"
+                        >
+
+                            <span class="service-icon">
+                                ⚖
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho penal
+                                </strong>
+
+                                <small>
+                                    Procesos y asuntos penales
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho de familia"
+                        >
+
+                            <span class="service-icon">
+                                ♡
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho de familia
+                                </strong>
+
+                                <small>
+                                    Familia, alimentos y custodia
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho civil"
+                        >
+
+                            <span class="service-icon">
+                                §
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho civil
+                                </strong>
+
+                                <small>
+                                    Contratos y obligaciones
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho laboral"
+                        >
+
+                            <span class="service-icon">
+                                ◫
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho laboral
+                                </strong>
+
+                                <small>
+                                    Trabajo y relaciones laborales
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho comercial"
+                        >
+
+                            <span class="service-icon">
+                                ◇
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho comercial
+                                </strong>
+
+                                <small>
+                                    Empresas y sociedades
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho administrativo"
+                        >
+
+                            <span class="service-icon">
+                                ▣
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho administrativo
+                                </strong>
+
+                                <small>
+                                    Trámites y contratación estatal
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho constitucional"
+                        >
+
+                            <span class="service-icon">
+                                ◉
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho constitucional
+                                </strong>
+
+                                <small>
+                                    Derechos fundamentales y tutela
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho tributario"
+                        >
+
+                            <span class="service-icon">
+                                $
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho tributario
+                                </strong>
+
+                                <small>
+                                    Impuestos y obligaciones fiscales
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho inmobiliario"
+                        >
+
+                            <span class="service-icon">
+                                ⌂
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho inmobiliario
+                                </strong>
+
+                                <small>
+                                    Inmuebles y arrendamientos
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho de tránsito y transporte"
+                        >
+
+                            <span class="service-icon">
+                                ◇
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho de tránsito y transporte
+                                </strong>
+
+                                <small>
+                                    Accidentes y comparendos
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Derecho de seguridad social"
+                        >
+
+                            <span class="service-icon">
+                                +
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Derecho de seguridad social
+                                </strong>
+
+                                <small>
+                                    Pensiones, salud y riesgos laborales
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="service-option"
+                            data-service="Propiedad intelectual"
+                        >
+
+                            <span class="service-icon">
+                                ©
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Propiedad intelectual
+                                </strong>
+
+                                <small>
+                                    Marcas y derechos de autor
+                                </small>
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="step-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="toStep2"
+                            disabled
+                        >
+                            Continuar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PASO 2
+                ================================================== -->
+
+                <div
+                    class="booking-content-step"
+                    id="step2"
+                >
+
+                    <div class="section-heading">
+
+                        <span class="step-kicker">
+                            PASO 2
+                        </span>
+
+                        <h2>
+                            Selecciona un profesional
+                        </h2>
+
+                        <p id="professionalHelp">
+                            Primero selecciona el servicio para
+                            consultar los profesionales disponibles.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="selected-service"
+                        id="selectedServiceBox"
+                    >
+
+                        <span>
+                            Servicio seleccionado
+                        </span>
+
+                        <strong id="selectedService">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="professional-grid"
+                        id="professionalGrid"
+                    >
+                    </div>
+
+
+                    <div class="step-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="backToStep1"
+                        >
+                            ← Atrás
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="toStep3"
+                            disabled
+                        >
+                            Continuar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PASO 3
+                ================================================== -->
+
+                <div
+                    class="booking-content-step"
+                    id="step3"
+                >
+
+                    <div class="section-heading">
+
+                        <span class="step-kicker">
+                            PASO 3
+                        </span>
+
+                        <h2>
+                            Elige fecha y horario
+                        </h2>
+
+                        <p>
+                            Selecciona primero una fecha.
+                            Los horarios disponibles aparecerán
+                            después de seleccionarla.
+                        </p>
+
+                    </div>
+
+
+                    <div class="date-area">
+
+                        <label for="appointmentDate">
+                            Fecha de la cita
+                        </label>
+
+                        <input
+                            type="date"
+                            id="appointmentDate"
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="schedule-area hidden"
+                        id="scheduleArea"
+                    >
+
+                        <div class="schedule-title">
+
+                            <span>
+                                Horarios disponibles
+                            </span>
+
+                            <strong id="scheduleDateText">
+                                Selecciona una fecha
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="time-grid"
+                            id="timeGrid"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="empty-schedule"
+                        id="emptySchedule"
+                    >
+
+                        <span>
+                            📅
+                        </span>
+
+                        <strong>
+                            Selecciona una fecha
+                        </strong>
+
+                        <p>
+                            Los horarios disponibles se mostrarán
+                            aquí después de elegir la fecha.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="backToStep2"
+                        >
+                            ← Atrás
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="toStep4"
+                            disabled
+                        >
+                            Continuar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PASO 4
+                ================================================== -->
+
+                <div
+                    class="booking-content-step"
+                    id="step4"
+                >
+
+                    <div class="section-heading">
+
+                        <span class="step-kicker">
+                            PASO 4
+                        </span>
+
+                        <h2>
+                            Confirma tu cita
+                        </h2>
+
+                        <p>
+                            Revisa la información antes de confirmar
+                            la solicitud.
+                        </p>
+
+                    </div>
+
+
+                    <div class="confirmation">
+
+
+                        <div class="confirmation-row">
+
+                            <span>
+                                Servicio
+                            </span>
+
+                            <strong id="confirmService">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="confirmation-row">
+
+                            <span>
+                                Profesional
+                            </span>
+
+                            <strong id="confirmProfessional">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="confirmation-row">
+
+                            <span>
+                                Fecha
+                            </span>
+
+                            <strong id="confirmDate">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="confirmation-row">
+
+                            <span>
+                                Hora
+                            </span>
+
+                            <strong id="confirmTime">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="confirmation-row">
+
+                            <span>
+                                Cliente
+                            </span>
+
+                            <strong>
+                                William Rios
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reason-area">
+
+                        <label for="reason">
+                            Motivo de la consulta
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            rows="4"
+                            placeholder="Describe brevemente el motivo de tu consulta..."
+                        ></textarea>
+
+                        <small>
+                            Esta información ayudará al profesional
+                            a conocer previamente el motivo de la cita.
+                        </small>
+
+                    </div>
+
+
+                    <div class="step-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="backToStep3"
+                        >
+                            ← Atrás
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="confirmAppointment"
+                        >
+                            Confirmar cita
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CONFIRMACIÓN EXITOSA
+                ================================================== -->
+
+                <div
+                    class="booking-content-step success-step"
+                    id="successStep"
+                >
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+                    <span class="step-kicker">
+                        SOLICITUD COMPLETADA
+                    </span>
+
+                    <h2>
+                        ¡Tu cita fue registrada!
+                    </h2>
+
+                    <p>
+                        Hemos registrado tu solicitud de cita
+                        correctamente.
+                    </p>
+
+
+                    <div class="success-summary">
+
+
+                        <div>
+
+                            <span>
+                                Servicio
+                            </span>
+
+                            <strong id="successService">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Profesional
+                            </span>
+
+                            <strong id="successProfessional">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Fecha
+                            </span>
+
+                            <strong id="successDate">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Hora
+                            </span>
+
+                            <strong id="successTime">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="success-actions">
+
+                        <a
+                            class="btn btn-primary"
+                            href="mis-citas.html"
+                        >
+                            Ver mis citas
+                        </a>
+
+                        <a
+                            class="btn btn-secondary"
+                            href="dashboard-cliente.html"
+                        >
+                            Ir al panel
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 RESUMEN LATERAL
+            ================================================== -->
+
+            <aside class="summary-card">
+
+                <span class="summary-kicker">
+                    RESUMEN
+                </span>
+
+                <h2>
+                    Tu cita
+                </h2>
+
+
+                <div
+                    class="summary-empty"
+                    id="summaryEmpty"
+                >
+
+                    <span>
+                        📋
+                    </span>
+
+                    <p>
+                        Completa los pasos para visualizar
+                        aquí el resumen de tu cita.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="summary-content hidden"
+                    id="summaryContent"
+                >
+
+                    <div class="summary-item">
+
+                        <span>
+                            Servicio
+                        </span>
+
+                        <strong id="summaryService">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Profesional
+                        </span>
+
+                        <strong id="summaryProfessional">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Fecha
+                        </span>
+
+                        <strong id="summaryDate">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Hora
+                        </span>
+
+                        <strong id="summaryTime">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-note">
+
+                    <strong>
+                        Importante
+                    </strong>
+
+                    <p>
+                        La disponibilidad de los horarios depende
+                        del profesional seleccionado y de la fecha
+                        elegida.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     PIE DE PÁGINA
+========================================================= -->
+
+<footer class="dashboard-footer">
+
+    <div class="container">
+
+        <span>
+            © 2026 LegalAgenCit
+        </span>
+
+        <div>
+
+            <a href="#">
+                Privacidad
+            </a>
+
+            <a href="#">
+                Términos de uso
+            </a>
+
+            <a href="dashboard-cliente.html">
+                Panel del cliente
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   CATÁLOGO DE PROFESIONALES
+========================================================= */
+
+const professionals = [
+
+    {
+        name: "Dr. Carlos Ramírez",
+        specialties: [
+            "Derecho penal",
+            "Derecho constitucional",
+            "Derecho de tránsito y transporte"
+        ],
+        specialty: "Penal",
+        areas:
+            "Procesos penales, delitos económicos, responsabilidad penal y asuntos relacionados con tránsito",
+        initials: "CR"
+    },
+
+    {
+        name: "Dra. Sofía Castro",
+        specialties: [
+            "Derecho de familia",
+            "Derecho civil"
+        ],
+        specialty: "Familia",
+        areas:
+            "Divorcio, alimentos, custodia, sucesiones y asuntos civiles",
+        initials: "SC"
+    },
+
+    {
+        name: "Dr. Andrés Morales",
+        specialties: [
+            "Derecho civil",
+            "Derecho inmobiliario",
+            "Derecho comercial"
+        ],
+        specialty: "Civil",
+        areas:
+            "Contratos, obligaciones, responsabilidad civil, propiedad y asuntos comerciales",
+        initials: "AM"
+    },
+
+    {
+        name: "Dra. Valentina Gómez",
+        specialties: [
+            "Derecho laboral",
+            "Derecho de seguridad social",
+            "Derecho civil"
+        ],
+        specialty: "Laboral",
+        areas:
+            "Contratos laborales, despidos, prestaciones, conflictos laborales y seguridad social",
+        initials: "VG"
+    },
+
+    {
+        name: "Dr. Alejandro Torres",
+        specialties: [
+            "Derecho comercial",
+            "Derecho civil",
+            "Derecho tributario"
+        ],
+        specialty: "Comercial",
+        areas:
+            "Sociedades, contratos comerciales, obligaciones mercantiles, empresas y asuntos tributarios",
+        initials: "AT"
+    },
+
+    {
+        name: "Dra. Laura Martínez",
+        specialties: [
+            "Derecho administrativo",
+            "Derecho constitucional"
+        ],
+        specialty: "Administrativo",
+        areas:
+            "Contratación estatal, actos administrativos, procedimientos administrativos y asuntos constitucionales",
+        initials: "LM"
+    },
+
+    {
+        name: "Dr. Sebastián Herrera",
+        specialties: [
+            "Derecho constitucional",
+            "Derecho penal",
+            "Derecho administrativo"
+        ],
+        specialty: "Constitucional",
+        areas:
+            "Derechos fundamentales, acciones de tutela, mecanismos constitucionales y asuntos administrativos",
+        initials: "SH"
+    },
+
+    {
+        name: "Dra. Natalia Rodríguez",
+        specialties: [
+            "Derecho tributario",
+            "Derecho comercial",
+            "Derecho administrativo"
+        ],
+        specialty: "Tributario",
+        areas:
+            "Impuestos, obligaciones tributarias, declaraciones, procedimientos fiscales y asuntos comerciales",
+        initials: "NR"
+    },
+
+    {
+        name: "Dr. Felipe Vargas",
+        specialties: [
+            "Derecho inmobiliario",
+            "Derecho civil",
+            "Derecho comercial"
+        ],
+        specialty: "Inmobiliario",
+        areas:
+            "Compraventa de inmuebles, arrendamientos, propiedad, contratos y trámites inmobiliarios",
+        initials: "FV"
+    },
+
+    {
+        name: "Dra. Carolina Pérez",
+        specialties: [
+            "Derecho de tránsito y transporte",
+            "Derecho civil",
+            "Derecho penal"
+        ],
+        specialty: "Tránsito y Transporte",
+        areas:
+            "Accidentes de tránsito, comparendos, licencias, responsabilidad vial y asuntos civiles relacionados",
+        initials: "CP"
+    },
+
+    {
+        name: "Dr. Daniel Rojas",
+        specialties: [
+            "Derecho de seguridad social",
+            "Derecho laboral",
+            "Derecho civil"
+        ],
+        specialty: "Seguridad Social",
+        areas:
+            "Pensiones, salud, riesgos laborales, prestaciones sociales y conflictos laborales",
+        initials: "DR"
+    },
+
+    {
+        name: "Dra. Mariana López",
+        specialties: [
+            "Propiedad intelectual",
+            "Derecho comercial",
+            "Derecho civil"
+        ],
+        specialty: "Propiedad Intelectual",
+        areas:
+            "Marcas, derechos de autor, propiedad industrial, registro de obras y asuntos comerciales",
+        initials: "ML"
+    }
+
+];
+
+
+/* =========================================================
+   ESTADO DE LA CITA
+========================================================= */
+
+let appointment = {
+    service: "",
+    professional: null,
+    date: "",
+    time: "",
+    reason: ""
+};
+
+
+/* =========================================================
+   ELEMENTOS
+========================================================= */
+
+const steps =
+    document.querySelectorAll(
+        ".booking-content-step"
+    );
+
+const indicators =
+    document.querySelectorAll(
+        ".booking-step-indicator"
+    );
+
+const serviceButtons =
+    document.querySelectorAll(
+        ".service-option"
+    );
+
+const professionalGrid =
+    document.getElementById(
+        "professionalGrid"
+    );
+
+const selectedService =
+    document.getElementById(
+        "selectedService"
+    );
+
+const toStep2 =
+    document.getElementById(
+        "toStep2"
+    );
+
+const toStep3 =
+    document.getElementById(
+        "toStep3"
+    );
+
+const toStep4 =
+    document.getElementById(
+        "toStep4"
+    );
+
+const appointmentDate =
+    document.getElementById(
+        "appointmentDate"
+    );
+
+const timeGrid =
+    document.getElementById(
+        "timeGrid"
+    );
+
+const scheduleArea =
+    document.getElementById(
+        "scheduleArea"
+    );
+
+const emptySchedule =
+    document.getElementById(
+        "emptySchedule"
+    );
+
+const reason =
+    document.getElementById(
+        "reason"
+    );
+
+
+/* =========================================================
+   CAMBIAR PASO
+========================================================= */
+
+function showStep(number) {
+
+    steps.forEach(step => {
+        step.classList.remove("active");
+    });
+
+    indicators.forEach(indicator => {
+
+        indicator.classList.remove("active");
+        indicator.classList.remove("completed");
+
+        const stepNumber =
+            Number(
+                indicator.dataset.stepIndicator
+            );
+
+        if (stepNumber < number) {
+            indicator.classList.add("completed");
+        }
+
+        if (stepNumber === number) {
+            indicator.classList.add("active");
+        }
+
+    });
+
+    const selectedStep =
+        document.getElementById(
+            `step${number}`
+        );
+
+    if (selectedStep) {
+        selectedStep.classList.add("active");
+    }
+
+}
+
+
+/* =========================================================
+   PASO 1 — SERVICIO
+========================================================= */
+
+serviceButtons.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            serviceButtons.forEach(item => {
+                item.classList.remove(
+                    "selected"
+                );
+            });
+
+            button.classList.add(
+                "selected"
+            );
+
+            appointment.service =
+                button.dataset.service;
+
+            appointment.professional =
+                null;
+
+            appointment.date = "";
+            appointment.time = "";
+
+            toStep2.disabled = false;
+
+            renderProfessionals();
+            updateSummary();
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   PROFESIONALES COMPATIBLES
+========================================================= */
+
+function renderProfessionals() {
+
+    professionalGrid.innerHTML = "";
+
+    const available =
+        professionals.filter(
+            professional =>
+                professional.specialties.includes(
+                    appointment.service
+                )
+        );
+
+    selectedService.textContent =
+        appointment.service;
+
+    if (available.length === 0) {
+
+        professionalGrid.innerHTML = `
+
+            <div class="no-professionals">
+
+                <strong>
+                    No hay profesionales disponibles
+                </strong>
+
+                <p>
+                    Actualmente no encontramos profesionales
+                    asociados a este servicio.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    available.forEach(professional => {
+
+        const card =
+            document.createElement(
+                "button"
+            );
+
+        card.type = "button";
+
+        card.className =
+            "professional-option";
+
+        card.innerHTML = `
+
+            <span class="professional-avatar">
+                ${professional.initials}
+            </span>
+
+            <span class="professional-info">
+
+                <strong>
+                    ${professional.name}
+                </strong>
+
+                <small>
+                    Especialidad principal:
+                    ${professional.specialty}
+                </small>
+
+                <em>
+                    ${professional.areas}
+                </em>
+
+            </span>
+
+            <span class="select-arrow">
+                →
+            </span>
+
+        `;
+
+
+        card.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(
+                        ".professional-option"
+                    )
+                    .forEach(item => {
+
+                        item.classList.remove(
+                            "selected"
+                        );
+
+                    });
+
+
+                card.classList.add(
+                    "selected"
+                );
+
+
+                appointment.professional =
+                    professional;
+
+                toStep3.disabled = false;
+
+                updateSummary();
+
+            }
+        );
+
+
+        professionalGrid.appendChild(
+            card
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   PASO 2
+========================================================= */
+
+toStep2.addEventListener(
+    "click",
+    () => {
+
+        if (!appointment.service) {
+            return;
+        }
+
+        showStep(2);
+
+    }
+);
+
+
+/* =========================================================
+   VOLVER AL PASO 1
+========================================================= */
+
+document
+    .getElementById(
+        "backToStep1"
+    )
+    .addEventListener(
+        "click",
+        () => {
+            showStep(1);
+        }
+    );
+
+
+/* =========================================================
+   PASO 3
+========================================================= */
+
+toStep3.addEventListener(
+    "click",
+    () => {
+
+        if (!appointment.professional) {
+            return;
+        }
+
+        showStep(3);
+
+    }
+);
+
+
+/* =========================================================
+   VOLVER AL PASO 2
+========================================================= */
+
+document
+    .getElementById(
+        "backToStep2"
+    )
+    .addEventListener(
+        "click",
+        () => {
+            showStep(2);
+        }
+    );
+
+
+/* =========================================================
+   FECHA MÍNIMA
+========================================================= */
+
+const today =
+    new Date();
+
+const year =
+    today.getFullYear();
+
+const month =
+    String(
+        today.getMonth() + 1
+    ).padStart(2, "0");
+
+const day =
+    String(
+        today.getDate()
+    ).padStart(2, "0");
+
+appointmentDate.min =
+    `${year}-${month}-${day}`;
+
+
+/* =========================================================
+   CAMBIO DE FECHA
+========================================================= */
+
+appointmentDate.addEventListener(
+    "change",
+    () => {
+
+        appointment.date =
+            appointmentDate.value;
+
+        appointment.time = "";
+
+        if (!appointment.date) {
+
+            scheduleArea.classList.add(
+                "hidden"
+            );
+
+            emptySchedule.classList.remove(
+                "hidden"
+            );
+
+            toStep4.disabled = true;
+
+            return;
+        }
+
+        renderTimes();
+        updateSummary();
+
+    }
+);
+
+
+/* =========================================================
+   GENERAR HORARIOS
+========================================================= */
+
+function renderTimes() {
+
+    timeGrid.innerHTML = "";
+
+    scheduleArea.classList.remove(
+        "hidden"
+    );
+
+    emptySchedule.classList.add(
+        "hidden"
+    );
+
+    toStep4.disabled = true;
+
+
+    const selectedDate =
+        new Date(
+            `${appointment.date}T12:00:00`
+        );
+
+    const dayOfWeek =
+        selectedDate.getDay();
+
+
+    if (
+        dayOfWeek === 0 ||
+        dayOfWeek === 6
+    ) {
+
+        timeGrid.innerHTML = `
+
+            <div class="no-times">
+
+                <strong>
+                    No hay atención este día
+                </strong>
+
+                <p>
+                    Selecciona un día entre lunes y viernes.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    const times = [
+        "08:00",
+        "09:00",
+        "10:00",
+        "11:00",
+        "14:00",
+        "15:00",
+        "16:00"
+    ];
+
+
+    times.forEach(time => {
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+        button.type = "button";
+
+        button.className =
+            "time-option";
+
+        button.textContent =
+            formatTime(time);
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(
+                        ".time-option"
+                    )
+                    .forEach(item => {
+
+                        item.classList.remove(
+                            "selected"
+                        );
+
+                    });
+
+
+                button.classList.add(
+                    "selected"
+                );
+
+
+                appointment.time =
+                    time;
+
+                toStep4.disabled = false;
+
+                updateSummary();
+
+            }
+        );
+
+
+        timeGrid.appendChild(
+            button
+        );
+
+    });
+
+
+    document.getElementById(
+        "scheduleDateText"
+    ).textContent =
+        formatDate(
+            appointment.date
+        );
+
+}
+
+
+/* =========================================================
+   FORMATO DE HORA
+========================================================= */
+
+function formatTime(time) {
+
+    const [
+        hours,
+        minutes
+    ] =
+        time.split(":");
+
+
+    const date =
+        new Date();
+
+    date.setHours(
+        Number(hours),
+        Number(minutes)
+    );
+
+
+    return date.toLocaleTimeString(
+        "es-CO",
+        {
+            hour: "numeric",
+            minute: "2-digit"
+        }
+    );
+
+}
+
+
+/* =========================================================
+   FORMATO DE FECHA
+========================================================= */
+
+function formatDate(dateString) {
+
+    if (!dateString) {
+        return "—";
+    }
+
+
+    const date =
+        new Date(
+            `${dateString}T12:00:00`
+        );
+
+
+    return date.toLocaleDateString(
+        "es-CO",
+        {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }
+    );
+
+}
+
+
+/* =========================================================
+   PASO 4
+========================================================= */
+
+toStep4.addEventListener(
+    "click",
+    () => {
+
+        if (
+            !appointment.date ||
+            !appointment.time
+        ) {
+            return;
+        }
+
+
+        document.getElementById(
+            "confirmService"
+        ).textContent =
+            appointment.service;
+
+
+        document.getElementById(
+            "confirmProfessional"
+        ).textContent =
+            appointment.professional.name;
+
+
+        document.getElementById(
+            "confirmDate"
+        ).textContent =
+            formatDate(
+                appointment.date
+            );
+
+
+        document.getElementById(
+            "confirmTime"
+        ).textContent =
+            formatTime(
+                appointment.time
+            );
+
+
+        showStep(4);
+
+    }
+);
+
+
+/* =========================================================
+   VOLVER AL PASO 3
+========================================================= */
+
+document
+    .getElementById(
+        "backToStep3"
+    )
+    .addEventListener(
+        "click",
+        () => {
+            showStep(3);
+        }
+    );
+
+
+/* =========================================================
+   MOTIVO
+========================================================= */
+
+reason.addEventListener(
+    "input",
+    () => {
+
+        appointment.reason =
+            reason.value;
+
+    }
+);
+
+
+/* =========================================================
+   CONFIRMAR CITA
+========================================================= */
+
+document
+    .getElementById(
+        "confirmAppointment"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            document.getElementById(
+                "successService"
+            ).textContent =
+                appointment.service;
+
+
+            document.getElementById(
+                "successProfessional"
+            ).textContent =
+                appointment.professional.name;
+
+
+            document.getElementById(
+                "successDate"
+            ).textContent =
+                formatDate(
+                    appointment.date
+                );
+
+
+            document.getElementById(
+                "successTime"
+            ).textContent =
+                formatTime(
+                    appointment.time
+                );
+
+
+            steps.forEach(step => {
+
+                step.classList.remove(
+                    "active"
+                );
+
+            });
+
+
+            document
+                .getElementById(
+                    "successStep"
+                )
+                .classList.add(
+                    "active"
+                );
+
+
+            indicators.forEach(
+                indicator => {
+
+                    indicator.classList.remove(
+                        "active"
+                    );
+
+                    indicator.classList.add(
+                        "completed"
+                    );
+
+                }
+            );
+
+
+            updateSummary();
+
+        }
+    );
+
+
+/* =========================================================
+   ACTUALIZAR RESUMEN
+========================================================= */
+
+function updateSummary() {
+
+    const hasInformation =
+        appointment.service ||
+        appointment.professional ||
+        appointment.date ||
+        appointment.time;
+
+
+    if (!hasInformation) {
+
+        document
+            .getElementById(
+                "summaryEmpty"
+            )
+            .classList.remove(
+                "hidden"
+            );
+
+
+        document
+            .getElementById(
+                "summaryContent"
+            )
+            .classList.add(
+                "hidden"
+            );
+
+        return;
+    }
+
+
+    document
+        .getElementById(
+            "summaryEmpty"
+        )
+        .classList.add(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "summaryContent"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+
+    document.getElementById(
+        "summaryService"
+    ).textContent =
+        appointment.service ||
+        "Pendiente";
+
+
+    document.getElementById(
+        "summaryProfessional"
+    ).textContent =
+        appointment.professional
+            ? appointment.professional.name
+            : "Pendiente";
+
+
+    document.getElementById(
+        "summaryDate"
+    ).textContent =
+        appointment.date
+            ? formatDate(
+                appointment.date
+            )
+            : "Pendiente";
+
+
+    document.getElementById(
+        "summaryTime"
+    ).textContent =
+        appointment.time
+            ? formatTime(
+                appointment.time
+            )
+            : "Pendiente";
+
+}
+
+
+/* =========================================================
+   MENÚ DEL USUARIO
+========================================================= */
+
+const userButton =
+    document.getElementById(
+        "userButton"
+    );
+
+const userMenu =
+    document.getElementById(
+        "userMenu"
+    );
+
+
+userButton.addEventListener(
+    "click",
+    () => {
+
+        const expanded =
+            userButton.getAttribute(
+                "aria-expanded"
+            ) === "true";
+
+
+        userButton.setAttribute(
+            "aria-expanded",
+            String(!expanded)
+        );
+
+
+        userMenu.classList.toggle(
+            "open",
+            !expanded
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CERRAR MENÚ
+========================================================= */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        if (
+            !userButton.contains(
+                event.target
+            ) &&
+            !userMenu.contains(
+                event.target
+            )
+        ) {
+
+            userButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            userMenu.classList.remove(
+                "open"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   ESC
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            userButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            userMenu.classList.remove(
+                "open"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INICIALIZACIÓN
+========================================================= */
+
+updateSummary();
+
+</script>
+
+</body>
+
+</html>

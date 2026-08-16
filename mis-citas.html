@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta y administra tus citas jurídicas en LegalAgenCit.">
+    <title>Mis citas | LegalAgenCit</title>
+
+    <link rel="stylesheet" href="assets/css/mis-citas.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- =========================================
+         ENCABEZADO
+         ========================================= -->
+
+    <header class="dashboard-header">
+
+        <div class="container dashboard-navbar">
+
+            <a class="brand" href="dashboard-cliente.html" aria-label="LegalAgenCit - Panel">
+                <span class="brand-name">LegalAgenCit</span>
+            </a>
+
+
+            <nav class="dashboard-nav" aria-label="Navegación del cliente">
+
+                <a href="dashboard-cliente.html">
+                    Inicio
+                </a>
+
+                <a class="active" href="mis-citas.html">
+                    Mis citas
+                </a>
+
+                <a href="perfil.html">
+                    Mi perfil
+                </a>
+
+            </nav>
+
+
+            <div class="dashboard-user">
+
+                <button
+                    class="user-menu-button"
+                    type="button"
+                    id="userMenuButton"
+                    aria-expanded="false"
+                    aria-controls="userMenu"
+                >
+
+                    <span class="user-avatar">
+                        WR
+                    </span>
+
+                    <span class="user-name">
+                        William Rios
+                    </span>
+
+                    <span class="user-chevron">
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div class="user-menu" id="userMenu">
+
+                    <a href="perfil.html">
+                        Mi perfil
+                    </a>
+
+                    <a href="mis-citas.html">
+                        Mis citas
+                    </a>
+
+                    <a href="login.html">
+                        Cerrar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+         ========================================= -->
+
+    <main class="appointments-main">
+
+        <div class="container">
+
+
+            <!-- =========================================
+                 ENCABEZADO DE LA PÁGINA
+                 ========================================= -->
+
+            <section class="appointments-heading">
+
+                <div>
+
+                    <span class="dashboard-kicker">
+                        Agenda personal
+                    </span>
+
+                    <h1>
+                        Mis citas
+                    </h1>
+
+                    <p>
+                        Consulta, revisa y administra tus solicitudes de atención jurídica.
+                    </p>
+
+                </div>
+
+
+                <a
+                    class="btn btn-primary"
+                    href="agendar-cita.html"
+                >
+                    + Agendar una cita
+                </a>
+
+            </section>
+
+
+            <!-- =========================================
+                 PANEL DE CITAS
+                 ========================================= -->
+
+            <section class="appointments-panel">
+
+
+                <!-- =========================================
+                     PESTAÑAS DE FILTRO
+                     ========================================= -->
+
+                <div
+                    class="appointment-tabs"
+                    role="tablist"
+                    aria-label="Filtrar citas"
+                >
+
+                    <button
+                        class="appointment-tab active"
+                        type="button"
+                        data-filter="all"
+                        aria-selected="true"
+                        role="tab"
+                    >
+                        Todas
+
+                        <span
+                            class="tab-count"
+                            id="countAll"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="appointment-tab"
+                        type="button"
+                        data-filter="confirmed"
+                        aria-selected="false"
+                        role="tab"
+                    >
+                        Confirmadas
+
+                        <span
+                            class="tab-count"
+                            id="countConfirmed"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="appointment-tab"
+                        type="button"
+                        data-filter="pending"
+                        aria-selected="false"
+                        role="tab"
+                    >
+                        Pendientes
+
+                        <span
+                            class="tab-count"
+                            id="countPending"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="appointment-tab"
+                        type="button"
+                        data-filter="completed"
+                        aria-selected="false"
+                        role="tab"
+                    >
+                        Realizadas
+
+                        <span
+                            class="tab-count"
+                            id="countCompleted"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="appointment-tab"
+                        type="button"
+                        data-filter="cancelled"
+                        aria-selected="false"
+                        role="tab"
+                    >
+                        Canceladas
+
+                        <span
+                            class="tab-count"
+                            id="countCancelled"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =========================================
+                     LISTA DE CITAS
+                     ========================================= -->
+
+                <div
+                    class="appointment-list"
+                    id="appointmentList"
+                >
+
+
+                    <!-- CITA 1 -->
+
+                    <article
+                        class="appointment-row"
+                        data-status="confirmed"
+                    >
+
+                        <div class="appointment-date-box">
+
+                            <span>
+                                AGO
+                            </span>
+
+                            <strong>
+                                18
+                            </strong>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="appointment-row-info">
+
+                            <div class="appointment-row-title">
+
+                                <h2>
+                                    Consulta de derecho civil
+                                </h2>
+
+                                <span class="appointment-status status-confirmed">
+                                    Confirmada
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                <strong>
+                                    Dr. Andrés Morales
+                                </strong>
+                            </p>
+
+                            <p>
+                                Martes, 18 de agosto de 2026 · 10:00 a. m.
+                            </p>
+
+                            <p>
+                                Modalidad: Consulta programada
+                            </p>
+
+                        </div>
+
+
+                        <div class="appointment-row-actions">
+
+                            <a
+                                href="detalle-cita.html"
+                                class="btn btn-outline"
+                            >
+                                Ver detalles
+                            </a>
+
+                            <button
+                                type="button"
+                                class="appointment-menu-button"
+                                aria-label="Más opciones"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CITA 2 -->
+
+                    <article
+                        class="appointment-row"
+                        data-status="completed"
+                    >
+
+                        <div class="appointment-date-box muted-date">
+
+                            <span>
+                                AGO
+                            </span>
+
+                            <strong>
+                                05
+                            </strong>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="appointment-row-info">
+
+                            <div class="appointment-row-title">
+
+                                <h2>
+                                    Consulta de derecho laboral
+                                </h2>
+
+                                <span class="appointment-status status-completed">
+                                    Realizada
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                <strong>
+                                    Dra. Valentina Gómez
+                                </strong>
+                            </p>
+
+                            <p>
+                                Miércoles, 5 de agosto de 2026 · 3:00 p. m.
+                            </p>
+
+                            <p>
+                                Modalidad: Consulta programada
+                            </p>
+
+                        </div>
+
+
+                        <div class="appointment-row-actions">
+
+                            <a
+                                href="detalle-cita.html"
+                                class="btn btn-outline"
+                            >
+                                Ver detalles
+                            </a>
+
+                            <button
+                                type="button"
+                                class="appointment-menu-button"
+                                aria-label="Más opciones"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CITA 3 -->
+
+                    <article
+                        class="appointment-row"
+                        data-status="completed"
+                    >
+
+                        <div class="appointment-date-box muted-date">
+
+                            <span>
+                                JUL
+                            </span>
+
+                            <strong>
+                                28
+                            </strong>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="appointment-row-info">
+
+                            <div class="appointment-row-title">
+
+                                <h2>
+                                    Consulta de derecho de familia
+                                </h2>
+
+                                <span class="appointment-status status-completed">
+                                    Realizada
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                <strong>
+                                    Dra. Sofía Castro
+                                </strong>
+                            </p>
+
+                            <p>
+                                Martes, 28 de julio de 2026 · 9:00 a. m.
+                            </p>
+
+                            <p>
+                                Modalidad: Consulta programada
+                            </p>
+
+                        </div>
+
+
+                        <div class="appointment-row-actions">
+
+                            <a
+                                href="detalle-cita.html"
+                                class="btn btn-outline"
+                            >
+                                Ver detalles
+                            </a>
+
+                            <button
+                                type="button"
+                                class="appointment-menu-button"
+                                aria-label="Más opciones"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CITA 4 -->
+
+                    <article
+                        class="appointment-row"
+                        data-status="completed"
+                    >
+
+                        <div class="appointment-date-box muted-date">
+
+                            <span>
+                                JUL
+                            </span>
+
+                            <strong>
+                                14
+                            </strong>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="appointment-row-info">
+
+                            <div class="appointment-row-title">
+
+                                <h2>
+                                    Consulta de derecho civil
+                                </h2>
+
+                                <span class="appointment-status status-completed">
+                                    Realizada
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                <strong>
+                                    Dr. Andrés Morales
+                                </strong>
+                            </p>
+
+                            <p>
+                                Martes, 14 de julio de 2026 · 11:00 a. m.
+                            </p>
+
+                            <p>
+                                Modalidad: Consulta programada
+                            </p>
+
+                        </div>
+
+
+                        <div class="appointment-row-actions">
+
+                            <a
+                                href="detalle-cita.html"
+                                class="btn btn-outline"
+                            >
+                                Ver detalles
+                            </a>
+
+                            <button
+                                type="button"
+                                class="appointment-menu-button"
+                                aria-label="Más opciones"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CITA 5 -->
+
+                    <article
+                        class="appointment-row"
+                        data-status="completed"
+                    >
+
+                        <div class="appointment-date-box muted-date">
+
+                            <span>
+                                JUN
+                            </span>
+
+                            <strong>
+                                30
+                            </strong>
+
+                            <small>
+                                2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="appointment-row-info">
+
+                            <div class="appointment-row-title">
+
+                                <h2>
+                                    Consulta de derecho comercial
+                                </h2>
+
+                                <span class="appointment-status status-completed">
+                                    Realizada
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                <strong>
+                                    Dr. Alejandro Torres
+                                </strong>
+                            </p>
+
+                            <p>
+                                Martes, 30 de junio de 2026 · 2:00 p. m.
+                            </p>
+
+                            <p>
+                                Modalidad: Consulta programada
+                            </p>
+
+                        </div>
+
+
+                        <div class="appointment-row-actions">
+
+                            <a
+                                href="detalle-cita.html"
+                                class="btn btn-outline"
+                            >
+                                Ver detalles
+                            </a>
+
+                            <button
+                                type="button"
+                                class="appointment-menu-button"
+                                aria-label="Más opciones"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =========================================
+                     ESTADO VACÍO
+                     ========================================= -->
+
+                <div
+                    class="appointments-empty"
+                    id="appointmentsEmpty"
+                    hidden
+                >
+
+                    <span class="empty-icon">
+                        ○
+                    </span>
+
+                    <h2>
+                        No hay citas para mostrar
+                    </h2>
+
+                    <p>
+                        Cuando exista una cita que coincida con este filtro aparecerá aquí.
+                    </p>
+
+                    <a
+                        href="agendar-cita.html"
+                        class="btn btn-primary"
+                    >
+                        Agendar una cita
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 NOTA INFORMATIVA
+                 ========================================= -->
+
+            <section class="appointment-info-note">
+
+                <strong>
+                    Importante
+                </strong>
+
+                <p>
+                    En la versión funcional, los estados, horarios y disponibilidad serán
+                    obtenidos directamente del sistema. Antes de confirmar una nueva cita,
+                    el servidor verificará nuevamente que el horario siga disponible.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         PIE DE PÁGINA
+         ========================================= -->
+
+    <footer class="dashboard-footer">
+
+        <div class="container">
+
+            <span>
+                © 2026 LegalAgenCit
+            </span>
+
+
+            <div>
+
+                <a href="#">
+                    Privacidad
+                </a>
+
+                <a href="#">
+                    Términos de uso
+                </a>
+
+                <a href="dashboard-cliente.html">
+                    Panel del cliente
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            /* =========================================
+               ELEMENTOS
+               ========================================= */
+
+            const tabs = document.querySelectorAll(
+                ".appointment-tab[data-filter]"
+            );
+
+            const rows = document.querySelectorAll(
+                ".appointment-row[data-status]"
+            );
+
+            const emptyState =
+                document.getElementById("appointmentsEmpty");
+
+
+            /* =========================================
+               CONTADORES
+               ========================================= */
+
+            const countElements = {
+
+                all:
+                    document.getElementById("countAll"),
+
+                confirmed:
+                    document.getElementById("countConfirmed"),
+
+                pending:
+                    document.getElementById("countPending"),
+
+                completed:
+                    document.getElementById("countCompleted"),
+
+                cancelled:
+                    document.getElementById("countCancelled")
+
+            };
+
+
+            /* =========================================
+               ACTUALIZAR CONTADORES
+               ========================================= */
+
+            function updateCounts() {
+
+                const counts = {
+
+                    all: rows.length,
+
+                    confirmed: 0,
+
+                    pending: 0,
+
+                    completed: 0,
+
+                    cancelled: 0
+
+                };
+
+
+                rows.forEach(function (row) {
+
+                    const status =
+                        (
+                            row.dataset.status || ""
+                        ).toLowerCase();
+
+
+                    if (
+                        Object.prototype.hasOwnProperty.call(
+                            counts,
+                            status
+                        )
+                    ) {
+
+                        counts[status]++;
+
+                    }
+
+                });
+
+
+                Object.keys(countElements).forEach(
+                    function (key) {
+
+                        if (countElements[key]) {
+
+                            countElements[key].textContent =
+                                counts[key];
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================
+               APLICAR FILTRO
+               ========================================= */
+
+            function applyFilter(filter) {
+
+                let visibleCount = 0;
+
+
+                rows.forEach(function (row) {
+
+                    const status =
+                        (
+                            row.dataset.status || ""
+                        ).toLowerCase();
+
+
+                    const shouldShow =
+                        filter === "all" ||
+                        status === filter;
+
+
+                    row.hidden =
+                        !shouldShow;
+
+
+                    if (shouldShow) {
+
+                        visibleCount++;
+
+                    }
+
+                });
+
+
+                if (emptyState) {
+
+                    emptyState.hidden =
+                        visibleCount !== 0;
+
+                }
+
+            }
+
+
+            /* =========================================
+               ACTIVAR PESTAÑA
+               ========================================= */
+
+            function activateTab(selectedTab) {
+
+                tabs.forEach(function (tab) {
+
+                    const isActive =
+                        tab === selectedTab;
+
+
+                    tab.classList.toggle(
+                        "active",
+                        isActive
+                    );
+
+
+                    tab.setAttribute(
+                        "aria-selected",
+                        isActive
+                            ? "true"
+                            : "false"
+                    );
+
+                });
+
+            }
+
+
+            /* =========================================
+               EVENTOS DE LAS PESTAÑAS
+               ========================================= */
+
+            tabs.forEach(function (tab) {
+
+                tab.addEventListener(
+                    "click",
+                    function () {
+
+                        const filter =
+                            tab.dataset.filter;
+
+
+                        activateTab(tab);
+
+                        applyFilter(filter);
+
+                    }
+                );
+
+            });
+
+
+            /* =========================================
+               MENÚ DEL USUARIO
+               ========================================= */
+
+            const userMenuButton =
+                document.getElementById(
+                    "userMenuButton"
+                );
+
+            const userMenu =
+                document.getElementById(
+                    "userMenu"
+                );
+
+
+            if (
+                userMenuButton &&
+                userMenu
+            ) {
+
+                userMenuButton.addEventListener(
+                    "click",
+                    function () {
+
+                        const expanded =
+                            userMenuButton.getAttribute(
+                                "aria-expanded"
+                            ) === "true";
+
+
+                        userMenuButton.setAttribute(
+                            "aria-expanded",
+                            String(!expanded)
+                        );
+
+
+                        userMenu.classList.toggle(
+                            "open",
+                            !expanded
+                        );
+
+                    }
+                );
+
+
+                document.addEventListener(
+                    "click",
+                    function (event) {
+
+                        if (
+                            !userMenuButton.contains(
+                                event.target
+                            ) &&
+                            !userMenu.contains(
+                                event.target
+                            )
+                        ) {
+
+                            userMenuButton.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+
+                            userMenu.classList.remove(
+                                "open"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================
+               INICIALIZACIÓN
+               ========================================= */
+
+            updateCounts();
+
+            applyFilter("all");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

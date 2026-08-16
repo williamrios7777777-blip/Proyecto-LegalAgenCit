@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Detalle de una cita jurídica de LegalAgenCit."
+    >
+
+    <title>Detalle de cita | LegalAgenCit</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/detalle-cita.css"
+    >
+</head>
+
+
+<body class="dashboard-page">
+
+
+<!-- =========================================
+     ENCABEZADO
+     ========================================= -->
+
+<header class="dashboard-header">
+
+    <div class="container dashboard-navbar">
+
+
+        <!-- MARCA -->
+
+        <a
+            class="brand"
+            href="dashboard-cliente.html"
+            aria-label="LegalAgenCit - Panel"
+        >
+            <span class="brand-mark">L</span>
+            <span>LegalAgenCit</span>
+        </a>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav
+            class="dashboard-nav"
+            aria-label="Navegación del cliente"
+        >
+
+            <a href="dashboard-cliente.html">
+                Inicio
+            </a>
+
+            <a
+                class="active"
+                href="mis-citas.html"
+            >
+                Mis citas
+            </a>
+
+            <a href="perfil.html">
+                Mi perfil
+            </a>
+
+        </nav>
+
+
+        <!-- USUARIO -->
+
+        <div class="dashboard-user">
+
+            <button
+                class="user-menu-button"
+                type="button"
+                id="userMenuButton"
+                aria-expanded="false"
+                aria-controls="userMenu"
+            >
+
+                <span class="user-avatar">
+                    WR
+                </span>
+
+                <span class="user-name">
+                    William Rios
+                </span>
+
+                <span class="user-chevron">
+                    ⌄
+                </span>
+
+            </button>
+
+
+            <div
+                class="user-menu"
+                id="userMenu"
+            >
+
+                <a href="perfil.html">
+                    Mi perfil
+                </a>
+
+                <a href="mis-citas.html">
+                    Mis citas
+                </a>
+
+                <a href="login.html">
+                    Cerrar sesión
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     CONTENIDO PRINCIPAL
+     ========================================= -->
+
+<main class="appointment-detail-main">
+
+    <div class="container">
+
+
+        <!-- =========================================
+             MIGAS DE NAVEGACIÓN
+             ========================================= -->
+
+        <nav
+            class="breadcrumb"
+            aria-label="Ruta de navegación"
+        >
+
+            <a href="mis-citas.html">
+                Mis citas
+            </a>
+
+            <span>
+                /
+            </span>
+
+            <span>
+                Detalle de cita
+            </span>
+
+        </nav>
+
+
+
+        <!-- =========================================
+             ENCABEZADO DEL DETALLE
+             ========================================= -->
+
+        <section class="appointment-detail-heading">
+
+            <div>
+
+                <span class="dashboard-kicker">
+                    Cita jurídica
+                </span>
+
+                <h1>
+                    Detalle de cita
+                </h1>
+
+                <p>
+                    Consulta la información completa de tu cita programada.
+                </p>
+
+            </div>
+
+
+            <span class="appointment-status status-confirmed">
+                Confirmada
+            </span>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTENIDO
+             ========================================= -->
+
+        <div class="appointment-detail-layout">
+
+
+            <!-- =====================================
+                 INFORMACIÓN PRINCIPAL
+                 ===================================== -->
+
+            <section class="appointment-detail-card">
+
+
+                <!-- RESUMEN -->
+
+                <div class="detail-card-header">
+
+                    <div>
+
+                        <span class="detail-label">
+                            Servicio jurídico
+                        </span>
+
+                        <h2>
+                            Consulta de derecho civil
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INFORMACIÓN DE LA CITA -->
+
+                <div class="detail-section">
+
+                    <h3>
+                        Información de la cita
+                    </h3>
+
+
+                    <div class="detail-grid">
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-item-label">
+                                Fecha
+                            </span>
+
+                            <strong>
+                                Martes, 18 de agosto de 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-item-label">
+                                Hora
+                            </span>
+
+                            <strong>
+                                10:00 a. m.
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-item-label">
+                                Profesional
+                            </span>
+
+                            <strong>
+                                Dr. Andrés Morales
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-item-label">
+                                Modalidad
+                            </span>
+
+                            <strong>
+                                Consulta programada
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-item-label">
+                                Duración
+                            </span>
+
+                            <strong>
+                                60 minutos
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-item-label">
+                                Estado
+                            </span>
+
+                            <strong class="detail-confirmed-text">
+                                Confirmada
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MOTIVO -->
+
+                <div class="detail-section">
+
+                    <h3>
+                        Motivo de la consulta
+                    </h3>
+
+                    <div class="detail-description">
+
+                        <p>
+                            Consulta relacionada con una situación de carácter
+                            civil que requiere orientación jurídica profesional.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OBSERVACIONES -->
+
+                <div class="detail-section">
+
+                    <h3>
+                        Observaciones
+                    </h3>
+
+                    <div class="detail-description">
+
+                        <p>
+                            Por favor, presenta los documentos relacionados con
+                            el caso que consideres importantes para la consulta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FECHA DE SOLICITUD -->
+
+                <div class="detail-section detail-section-last">
+
+                    <h3>
+                        Información de registro
+                    </h3>
+
+                    <div class="detail-grid">
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-item-label">
+                                Solicitud creada
+                            </span>
+
+                            <strong>
+                                12 de agosto de 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-item-label">
+                                Número de cita
+                            </span>
+
+                            <strong>
+                                LAC-2026-00128
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 PANEL LATERAL
+                 ===================================== -->
+
+            <aside class="appointment-detail-sidebar">
+
+
+                <!-- ACCIONES -->
+
+                <section class="detail-side-card">
+
+                    <h2>
+                        Acciones
+                    </h2>
+
+
+                    <div class="detail-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="rescheduleButton"
+                        >
+                            Reprogramar cita
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-danger-outline"
+                            id="cancelButton"
+                        >
+                            Cancelar cita
+                        </button>
+
+
+                        <a
+                            href="mis-citas.html"
+                            class="btn btn-outline"
+                        >
+                            Volver a mis citas
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- RECORDATORIO -->
+
+                <section class="detail-side-card detail-reminder">
+
+                    <span class="detail-reminder-icon">
+                        !
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Recuerda
+                        </h2>
+
+                        <p>
+                            Procura estar disponible unos minutos antes
+                            de la hora programada para tu consulta.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- AYUDA -->
+
+                <section class="detail-side-card">
+
+                    <h2>
+                        ¿Necesitas ayuda?
+                    </h2>
+
+                    <p>
+                        Si tienes algún inconveniente con tu cita,
+                        comunícate con la administración de LegalAgenCit.
+                    </p>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================
+     PIE DE PÁGINA
+     ========================================= -->
+
+<footer class="dashboard-footer">
+
+    <div class="container">
+
+        <span>
+            © 2026 LegalAgenCit
+        </span>
+
+
+        <div>
+
+            <a href="#">
+                Privacidad
+            </a>
+
+            <a href="#">
+                Términos de uso
+            </a>
+
+            <a href="dashboard-cliente.html">
+                Panel del cliente
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================
+           MENÚ DEL USUARIO
+           ===================================== */
+
+        const userMenuButton =
+            document.getElementById(
+                "userMenuButton"
+            );
+
+
+        const userMenu =
+            document.getElementById(
+                "userMenu"
+            );
+
+
+        if (
+            userMenuButton &&
+            userMenu
+        ) {
+
+            userMenuButton.addEventListener(
+                "click",
+                function () {
+
+                    const expanded =
+                        userMenuButton.getAttribute(
+                            "aria-expanded"
+                        ) === "true";
+
+
+                    userMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(!expanded)
+                    );
+
+
+                    userMenu.classList.toggle(
+                        "open",
+                        !expanded
+                    );
+
+                }
+            );
+
+
+            document.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        !userMenuButton.contains(
+                            event.target
+                        ) &&
+                        !userMenu.contains(
+                            event.target
+                        )
+                    ) {
+
+                        userMenuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        userMenu.classList.remove(
+                            "open"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================
+           BOTÓN REPROGRAMAR
+           ===================================== */
+
+        const rescheduleButton =
+            document.getElementById(
+                "rescheduleButton"
+            );
+
+
+        if (rescheduleButton) {
+
+            rescheduleButton.addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "agendar-cita.html";
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================
+           BOTÓN CANCELAR
+           ===================================== */
+
+        const cancelButton =
+            document.getElementById(
+                "cancelButton"
+            );
+
+
+        if (cancelButton) {
+
+            cancelButton.addEventListener(
+                "click",
+                function () {
+
+                    const confirmCancel =
+                        window.confirm(
+                            "¿Estás seguro de que deseas cancelar esta cita?"
+                        );
+
+
+                    if (confirmCancel) {
+
+                        alert(
+                            "La cancelación de la cita se realizará cuando el sistema esté conectado al servidor."
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>

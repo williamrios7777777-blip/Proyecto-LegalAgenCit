@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Consulta y administra tu información personal en LegalAgenCit."
+    >
+
+    <title>Mi perfil | LegalAgenCit</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/perfil.css"
+    >
+</head>
+
+
+<body class="dashboard-page">
+
+
+<!-- =========================================
+     ENCABEZADO
+     ========================================= -->
+
+<header class="dashboard-header">
+
+    <div class="container dashboard-navbar">
+
+
+        <!-- MARCA -->
+
+        <a
+            class="brand"
+            href="dashboard-cliente.html"
+            aria-label="LegalAgenCit - Panel"
+        >
+
+            <span class="brand-mark">
+                L
+            </span>
+
+            <span>
+                LegalAgenCit
+            </span>
+
+        </a>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav
+            class="dashboard-nav"
+            aria-label="Navegación del cliente"
+        >
+
+            <a href="dashboard-cliente.html">
+                Inicio
+            </a>
+
+            <a href="mis-citas.html">
+                Mis citas
+            </a>
+
+            <a
+                class="active"
+                href="perfil.html"
+            >
+                Mi perfil
+            </a>
+
+        </nav>
+
+
+        <!-- USUARIO -->
+
+        <div class="dashboard-user">
+
+            <button
+                class="user-menu-button"
+                type="button"
+                id="userMenuButton"
+                aria-expanded="false"
+                aria-controls="userMenu"
+            >
+
+                <span class="user-avatar">
+                    WR
+                </span>
+
+                <span class="user-name">
+                    William Rios
+                </span>
+
+                <span class="user-chevron">
+                    ⌄
+                </span>
+
+            </button>
+
+
+            <div
+                class="user-menu"
+                id="userMenu"
+            >
+
+                <a href="perfil.html">
+                    Mi perfil
+                </a>
+
+                <a href="mis-citas.html">
+                    Mis citas
+                </a>
+
+                <a href="login.html">
+                    Cerrar sesión
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     CONTENIDO PRINCIPAL
+     ========================================= -->
+
+<main class="profile-main">
+
+    <div class="container">
+
+
+        <!-- =========================================
+             ENCABEZADO
+             ========================================= -->
+
+        <section class="profile-heading">
+
+            <div>
+
+                <span class="dashboard-kicker">
+                    Cuenta personal
+                </span>
+
+                <h1>
+                    Mi perfil
+                </h1>
+
+                <p>
+                    Consulta y administra la información de tu cuenta en LegalAgenCit.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTENIDO DEL PERFIL
+             ========================================= -->
+
+        <div class="profile-layout">
+
+
+            <!-- =====================================
+                 INFORMACIÓN PERSONAL
+                 ===================================== -->
+
+            <section class="profile-card">
+
+                <div class="profile-card-header">
+
+                    <div>
+
+                        <span class="profile-card-kicker">
+                            Información personal
+                        </span>
+
+                        <h2>
+                            Datos de usuario
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PERFIL VISUAL -->
+
+                <div class="profile-identity">
+
+                    <div class="profile-avatar">
+                        WR
+                    </div>
+
+                    <div class="profile-identity-info">
+
+                        <h3>
+                            William Rios
+                        </h3>
+
+                        <p>
+                            Cliente
+                        </p>
+
+                        <span>
+                            Miembro de LegalAgenCit
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATOS -->
+
+                <div class="profile-section">
+
+                    <h3>
+                        Datos personales
+                    </h3>
+
+
+                    <div class="profile-info-grid">
+
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-label">
+                                Nombre completo
+                            </span>
+
+                            <strong>
+                                William Rios
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-label">
+                                Documento
+                            </span>
+
+                            <strong>
+                                Cédula de ciudadanía
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-label">
+                                Número de documento
+                            </span>
+
+                            <strong>
+                                1.234.567.890
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-label">
+                                Teléfono
+                            </span>
+
+                            <strong>
+                                300 000 0000
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-info-item profile-info-full">
+
+                            <span class="profile-info-label">
+                                Correo electrónico
+                            </span>
+
+                            <strong>
+                                william.rios@example.com
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIRECCIÓN -->
+
+                <div class="profile-section">
+
+                    <h3>
+                        Información de contacto
+                    </h3>
+
+
+                    <div class="profile-info-grid">
+
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-label">
+                                Ciudad
+                            </span>
+
+                            <strong>
+                                Cali
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-info-item">
+
+                            <span class="profile-info-label">
+                                Departamento
+                            </span>
+
+                            <strong>
+                                Valle del Cauca
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACCIONES -->
+
+                <div class="profile-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="editProfileButton"
+                    >
+                        Editar información
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-outline"
+                        id="changePasswordButton"
+                    >
+                        Cambiar contraseña
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 PANEL LATERAL
+                 ===================================== -->
+
+            <aside class="profile-sidebar">
+
+
+                <!-- SEGURIDAD -->
+
+                <section class="profile-side-card">
+
+                    <div class="side-card-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Cuenta segura
+                        </h2>
+
+                        <p>
+                            Tu información personal se encuentra protegida
+                            y solo estará disponible para tu cuenta.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ESTADO -->
+
+                <section class="profile-side-card">
+
+                    <h2>
+                        Estado de la cuenta
+                    </h2>
+
+
+                    <div class="account-status">
+
+                        <span class="status-dot"></span>
+
+                        <strong>
+                            Activa
+                        </strong>
+
+                    </div>
+
+
+                    <p>
+                        Puedes utilizar los servicios de LegalAgenCit
+                        y gestionar tus citas jurídicas.
+                    </p>
+
+                </section>
+
+
+                <!-- ACCESOS -->
+
+                <section class="profile-side-card">
+
+                    <h2>
+                        Accesos rápidos
+                    </h2>
+
+
+                    <div class="profile-quick-links">
+
+                        <a href="agendar-cita.html">
+                            <span>
+                                +
+                            </span>
+
+                            Agendar una cita
+                        </a>
+
+
+                        <a href="mis-citas.html">
+
+                            <span>
+                                →
+                            </span>
+
+                            Consultar mis citas
+
+                        </a>
+
+
+                        <a href="dashboard-cliente.html">
+
+                            <span>
+                                ←
+                            </span>
+
+                            Volver al panel
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+
+        <!-- =========================================
+             NOTA INFORMATIVA
+             ========================================= -->
+
+        <section class="profile-info-note">
+
+            <span class="profile-info-note-icon">
+                i
+            </span>
+
+            <div>
+
+                <strong>
+                    Información de privacidad
+                </strong>
+
+                <p>
+                    En la versión funcional, los datos mostrados en esta sección
+                    serán obtenidos directamente de la cuenta del usuario.
+                    Los cambios realizados se almacenarán en el sistema de forma segura.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer class="dashboard-footer">
+
+    <div class="container">
+
+        <span>
+            © 2026 LegalAgenCit
+        </span>
+
+
+        <div>
+
+            <a href="#">
+                Privacidad
+            </a>
+
+            <a href="#">
+                Términos de uso
+            </a>
+
+            <a href="dashboard-cliente.html">
+                Panel del cliente
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================
+           MENÚ DEL USUARIO
+           ===================================== */
+
+        const userMenuButton =
+            document.getElementById(
+                "userMenuButton"
+            );
+
+
+        const userMenu =
+            document.getElementById(
+                "userMenu"
+            );
+
+
+        if (
+            userMenuButton &&
+            userMenu
+        ) {
+
+            userMenuButton.addEventListener(
+                "click",
+                function () {
+
+                    const expanded =
+                        userMenuButton.getAttribute(
+                            "aria-expanded"
+                        ) === "true";
+
+
+                    userMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(!expanded)
+                    );
+
+
+                    userMenu.classList.toggle(
+                        "open",
+                        !expanded
+                    );
+
+                }
+            );
+
+
+            document.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        !userMenuButton.contains(
+                            event.target
+                        ) &&
+                        !userMenu.contains(
+                            event.target
+                        )
+                    ) {
+
+                        userMenuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        userMenu.classList.remove(
+                            "open"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================
+           EDITAR PERFIL
+           ===================================== */
+
+        const editProfileButton =
+            document.getElementById(
+                "editProfileButton"
+            );
+
+
+        if (editProfileButton) {
+
+            editProfileButton.addEventListener(
+                "click",
+                function () {
+
+                    alert(
+                        "La edición de información estará disponible cuando el sistema esté conectado al servidor."
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================
+           CAMBIAR CONTRASEÑA
+           ===================================== */
+
+        const changePasswordButton =
+            document.getElementById(
+                "changePasswordButton"
+            );
+
+
+        if (changePasswordButton) {
+
+            changePasswordButton.addEventListener(
+                "click",
+                function () {
+
+                    alert(
+                        "El cambio de contraseña estará disponible cuando el sistema esté conectado al servidor."
+                    );
+
+                }
+            );
+
+        }
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>
